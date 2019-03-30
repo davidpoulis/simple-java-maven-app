@@ -14,6 +14,13 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'mvn -B -DskipTests package' 
+                
+            }
+        }
+        stage('PWD') { 
+            steps {
+                sh 'pwd' 
+                
             }
         }
        stage('Test') {
